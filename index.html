@@ -1,16 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Task One</title>
+    <title>Tasks</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <style>
+        div{
+            background-repeat: no-repeat;
+            background: url("");
+        }
+    </style>
+
 </head>
 <body>
 <section class="container mt-3">
     <section class="row">
         <!--Case One-->
         <div class="col">
-            <h1>Hello There How are you.?</h1>
+            <h1 id="header">Hello There How are you.?</h1>
             <input id="txt" class="form-control" type="text" placeholder="Input Something">
             <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
         </div>
@@ -24,16 +32,17 @@
         </div>
     </section>
 </section>
-
 <script>
-    document.querySelector("input").addEventListener("keyup",function(){
-        document.querySelector("h1").innerText=document.querySelector("input").value
-    });
 
-    document.querySelector("#btn1").addEventListener("click",function(){
-        document.querySelector("h1").style.color="red";
-    });
+    document.querySelector("#btn2").addEventListener('click',function(){
+        var typeValue=document.querySelector("#url").value;
+        var divContainer=document.querySelector("#img");
 
+        divContainer.style.background=`url(${typeValue})`;
+        divContainer.style.backgroundPosition='center';
+        divContainer.style.backgroundSize='contain';
+        divContainer.style.backgroundRepeat='no-repeat';
+    })
 
 </script>
 </body>
