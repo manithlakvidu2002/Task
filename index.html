@@ -1,49 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tasks</title>
+    <title>Task Two</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <style>
-        div{
-            background-repeat: no-repeat;
-            background: url("");
-        }
-    </style>
-
 </head>
 <body>
-<section class="container mt-3">
-    <section class="row">
-        <!--Case One-->
-        <div class="col">
-            <h1 id="header">Hello There How are you.?</h1>
-            <input id="txt" class="form-control" type="text" placeholder="Input Something">
-            <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
-        </div>
 
-        <!--Case Two-->
-        <div class="col">
-            <h1>Input an Image Url</h1>
-            <input id="url" class="form-control" type="url" placeholder="Input Image URL">
-            <div id="img" style="height: 50vh" class="mt-2 border shadow"></div>
-            <button id="btn2" class="mt-2 btn btn-danger">Change Image</button>
+<section class="container">
+    <h1>Counter.!</h1>
+    <div class="row">
+        <div class="col-4">
+            <input id="txt" class="form-control" type="number" placeholder="Input a Number" value="0">
+            <button id="btnStart" class="btn btn-primary mt-2">Start</button>
+            <button id="btnStop" class="btn btn-danger mt-2">Stop</button>
+            <button id="btnMinus" class="btn btn-warning mt-2">-</button>
+            <button id="btnIncrement" class="btn btn-success mt-2">+</button>
         </div>
-    </section>
+        <div class="offset-1 col-3 shadow overflow-x-hidden d-flex justify-content-center align-items-center"
+             style="height: 50vh">
+            <h1 id="display" class="text-danger" style="font-size: 8em">0</h1>
+        </div>
+    </div>
 </section>
-<script>
 
-    document.querySelector("#btn2").addEventListener('click',function(){
-        var typeValue=document.querySelector("#url").value;
-        var divContainer=document.querySelector("#img");
 
-        divContainer.style.background=`url(${typeValue})`;
-        divContainer.style.backgroundPosition='center';
-        divContainer.style.backgroundSize='contain';
-        divContainer.style.backgroundRepeat='no-repeat';
-    })
+<script src="Java.js"></script>
 
-</script>
 </body>
 </html>
