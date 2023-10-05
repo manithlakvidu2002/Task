@@ -14,6 +14,7 @@ startbtn.addEventListener("click",function (){
     }else{
         display.innerText = txt;
     }
+
     interval = setInterval(function (){
         if (bool){
             display.innerText = parseInt(display.innerText)+1;

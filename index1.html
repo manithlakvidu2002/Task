@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Three</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body><
+<section class="container mt-5">
+    <h1 id="main">Traversing Methods in Jquery</h1>
+    <section class="row">
+        <div class="col-3">
+            <input class="form-control" type="text" placeholder="input">
+            <button id="btn" class="btn btn-danger mt-2">Test</button>
+
+        </div>
+        <div class="col-5">
+            <ol class="list-group" id="task" >
+
+            </ol>
+        </div>
+        <div class="col">
+            <div id="con" class="shadow">
+                <img src="" class="w-100 h-100" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="row mt-5">
+        <div class="col-12">
+            <ul id="ul" class="list-group">
+                <li>append()</li>
+                <li>prepend()</li>
+                <li>remove()</li>
+                <li>text()</li>
+                <li>val()</li>
+                <li>click()</li>
+                <li>attr()</li>
+                <li>css</li>
+            </ul>
+        </div>
+    </section>
+</section>
+
+<script src="bootstrap/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+
+<script>
+    let url;
+
+    $(`#btn`).click(function (){
+        url = $(`input`).val();
+        $(`#task`).append(`<li>${url}</li>`);
+        $(`img`).attr(`src`,url);
+    });
+</script>
+</body>
+</html>
